@@ -24,7 +24,6 @@
 <module xmlns="urn:jboss:module:1.1" name="com.fasterxml.jackson.core.jackson-core">
      <resources>
         <resource-root path="jackson-core-2.4.1.jar"/>
-        <!-- Insert resources here -->
     </resources>
 
     <dependencies>

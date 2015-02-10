@@ -1,6 +1,6 @@
 # OpenShift WildFly Cartridge
 
-These instructions will get you up and running with **WildFly 8.1.0.Final**. To run WildFly 9.0.0.Alpha1 instead, take a look at the documentation [here](https://github.com/openshift-cartridges/openshift-wildfly-cartridge/tree/wildfly-9).
+These instructions will get you up and running with **WildFly 8.2.0.Final**. To run WildFly 9.0.0.Alpha1 instead, take a look at the documentation [here](https://github.com/openshift-cartridges/openshift-wildfly-cartridge/tree/wildfly-9).
 
 This cartridge is based on the JBoss AS cartridge found in OpenShift Origin [here](https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas).  
 
@@ -14,9 +14,9 @@ You can also remove the pom.xml and /src directories and place a war file in the
 
 ### Create a new WildFly 8 app
 
-There are a few ways to get started quickly on OpenShift. To create a new WildFly app using the OpenShift Web Console, click on "Deploy Now" [here](https://www.openshift.com/quickstarts/wildfly-8). If you'd like to use the OpenShift [command line tools](https://www.openshift.com/get-started) instead, the following command can be used:
+There are a few ways to get started quickly on OpenShift. To create a new WildFly app using the OpenShift Web Console, click [here](https://openshift.redhat.com/app/console/application_type/cart!jboss-wildfly-8). If you'd like to use the OpenShift [command line tools](https://www.openshift.com/get-started) instead, the following command can be used:
 
-	rhc app create wildfly -s https://raw.githubusercontent.com/openshift-cartridges/openshift-wildfly-cartridge/wildfly-8/metadata/manifest.yml
+	rhc app create <WILDFLY_APP> -s jboss-wildfly-8
 	
 It will take a few minutes to build, so be patient.
 
