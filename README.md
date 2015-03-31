@@ -1,6 +1,6 @@
 # OpenShift WildFly Cartridge
 
-These instructions will get you up and running with **WildFly 8.2.0.Final**. To run WildFly 9.0.0.Alpha1 instead, take a look at the documentation [here](https://github.com/openshift-cartridges/openshift-wildfly-cartridge/tree/wildfly-9).
+These instructions will get you up and running with **WildFly 8.2.0.Final**. To run WildFly 9.0.0.Beta2 instead, take a look at the documentation [here](https://github.com/openshift-cartridges/openshift-wildfly-cartridge/tree/wildfly-9).
 
 This cartridge is based on the JBoss AS cartridge found in OpenShift Origin [here](https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-jbossas).  
 
@@ -75,6 +75,21 @@ Adding marker files to `.openshift/markers` will have the following effects:
     java7                Will run WildFly with Java 7 if present
 
 New WildFly apps will default to using Java 8.
+
+### Troubleshooting
+
+**Q:** Can the following error that sometimes occurs on startup be ignored? My app deploys fine even when this error occurs in the server log file.
+
+
+```
+ERROR [org.jboss.as.controller.management-operation] 
+(management-handler-thread - 4) JBAS014613: Operation ("read-resource") 
+failed - address: ([("subsystem" => "deployment-scanner")]) - failure 
+description: "JBAS014807: Management resource '[(\"subsystem\" => 
+\"deployment-scanner\")]' not found"
+```
+
+**A:**  Yes, this error can safely be ignored. It just indicates that the deployment scanner wasn't yet available when the cartridge attempted to check if your app was deployed. Your app will still get deployed successfully. 
 
 ### Thanks to the following:
 Stian Thorgersen for this blog article that helped get this going!
