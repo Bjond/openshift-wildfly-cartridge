@@ -24,8 +24,7 @@
 
 <module xmlns="urn:jboss:module:1.1" name="javax.ws.rs.api">
     <resources>
-        <resource-root path="jaxrs-api-3.0.9.Final.jar"/>
-        <!-- Insert resources here -->
+        <resource-root path="jaxrs-api-3.0.10.Final.jar"/>
     </resources>
 
     <dependencies>

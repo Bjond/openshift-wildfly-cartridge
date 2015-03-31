@@ -24,7 +24,6 @@
 <module xmlns="urn:jboss:module:1.1" name="com.fasterxml.jackson.core.jackson-databind">
      <resources>
         <resource-root path="jackson-databind-2.4.1.jar"/>
-        <!-- Insert resources here -->
     </resources>
 
     <dependencies>

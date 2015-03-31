@@ -22,20 +22,24 @@
   ~ 02110-1301 USA, or see the FSF site: http://www.fsf.org.
   -->
 
-<module xmlns="urn:jboss:module:1.1" name="org.jboss.resteasy.resteasy-crypto">
+<module xmlns="urn:jboss:module:1.3" name="org.jboss.resteasy.resteasy-crypto">
+    <properties>
+        <property name="jboss.api" value="private"/>
+    </properties>
+
     <resources>
-        <resource-root path="resteasy-crypto-3.0.9.Final.jar"/>
-	<resource-root path="resteasy-crypto-3.0.9.Final-jandex.jar"/>
-        <!-- Insert resources here -->
+        <resource-root path="resteasy-crypto-3.0.10.Final.jar"/>
+	<resource-root path="resteasy-crypto-3.0.10.Final-jandex.jar"/>
     </resources>
 
     <dependencies>
+        <module name="javax.api"/>
+        <module name="javax.activation.api"/>
         <module name="javax.mail.api"/>
         <module name="org.apache.james.mime4j"/>
-        <module name="javax.api"/>
         <module name="javax.servlet.api"/>
         <module name="javax.ws.rs.api"/>
+        <module name="org.bouncycastle"/>
         <module name="org.jboss.resteasy.resteasy-jaxrs"/>
-        <module name="org.bouncycastle" export="true"/>
     </dependencies>
 </module>
